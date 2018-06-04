@@ -4,7 +4,7 @@ language: generic
 services:
   - rabbitmq
 before_script:
-  - sudo rabbitmqctl add_user user_name_to_be_defined associated_password_to_be_defined
-  - sudo rabbitmqctl set_user_tags user_name_to_be_defined administrator
+  - sudo rabbitmqctl add_user kpc
+  - sudo rabbitmqctl set_user_tags kpc administrator
   - sudo rabbitmqctl set_permissions -p / kpc ".*" ".*" ".*"
   - sudo rabbitmq-plugins enable rabbitmq_management
