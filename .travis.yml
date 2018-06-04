@@ -7,7 +7,3 @@ before_script:
   - service rabbitmq-server start
   - service rabbitmq-server stop
   - service rabbitmq-server start
-
-install:
-	wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
-	sudo dpkg -i erlang-solutions_1.0_all.deb
