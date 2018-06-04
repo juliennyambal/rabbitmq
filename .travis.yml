@@ -1,7 +1,10 @@
 sudo: required
 
-language: generic
+language: python
+python:
+    - "3.6"
 services:
   - rabbitmq
 before_script:
-  - sudo rabbitmqctl add_vhost "kpc"
+  - sudo rabbitmqctl add_user kpc cpk
+  - sudo rabbitmqctl set_user_tags "kpc" administrator
