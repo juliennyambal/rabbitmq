@@ -14,3 +14,5 @@ script:
   - chmod +x test.sh
   - ./test.sh
   - pytest
+after_failure:
+  - cat MSBuild_*.failure.txt
