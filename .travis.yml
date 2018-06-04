@@ -10,3 +10,4 @@ before_script:
   - sudo rabbitmqctl set_user_tags "kpc" administrator
   - sudo rabbitmqctl set_permissions -p / kpc ".*" ".*" ".*"
   - sudo rabbitmq-plugins enable rabbitmq_management
+script: pytest
