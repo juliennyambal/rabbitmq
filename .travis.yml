@@ -11,5 +11,5 @@ before_script:
   - sudo rabbitmqctl set_permissions -p / kpc ".*" ".*" ".*"
   - sudo rabbitmq-plugins enable rabbitmq_management
 script:
-  - ifconfig 
+  - hostname -I | awk -F' ' '{print $1}'
   - pytest
