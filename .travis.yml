@@ -11,8 +11,8 @@ before_script:
   - sudo rabbitmqctl set_permissions -p / kpc ".*" ".*" ".*"
   - sudo rabbitmq-plugins enable rabbitmq_management
 script:
-  - chmod +x test.sh
-  - ./test.sh
+  - travis_ip=$(hostname -I | awk -F' ' '{print $1}')
+  - echo '#########' $travis_ip
   - pytest
 after_failure:
   - cat MSBuild_*.failure.txt
