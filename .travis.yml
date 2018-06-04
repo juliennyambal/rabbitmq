@@ -4,6 +4,7 @@ language: generic
 services:
   - rabbitmq
 before_script:
+  - service rabbitmq-server start
   - sudo rabbitmqctl add_user kpc
   - sudo rabbitmqctl set_user_tags kpc administrator
   - sudo rabbitmqctl set_permissions -p / kpc ".*" ".*" ".*"
